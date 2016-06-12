@@ -1,0 +1,18 @@
+<template name="projectCards">
+  <div class="row">
+    <div class="col l3 s12">
+      <p>
+        Totale ore: {{totalHours}}
+      </p>
+    </div>
+  </div>
+  {{#each project in projects}}
+  <div class="row">
+    {{#each project}}
+    <div class="col l4 s4">
+      {{>projectCard}}
+    </div>
+    {{/each}}
+  </div>
+  {{/each}}
+</template>

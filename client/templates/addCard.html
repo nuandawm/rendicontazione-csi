@@ -1,0 +1,35 @@
+<template name="addCard">
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#add-card-modal">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="add-card-modal" class="modal">
+    <div class="modal-content">
+      <h4>Inserisci un nuovo progetto</h4>
+      <div class="row">
+        <form class="col s12 new-project">
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Inserisci il nome del progetto" id="project_name" type="text" class="validate">
+              <label for="project_name">Nome progetto</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input placeholder="Inserisci il numero di ore" id="project_hours" type="text" class="validate">
+              <label for="project_hours">Numero di ore</label>
+            </div>
+          </div>
+
+          <input type="submit" class="waves-effect waves-light btn" value="Aggiungi"/>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Chiudi</a>
+    </div>
+  </div>
+</template>
