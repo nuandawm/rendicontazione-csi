@@ -15,5 +15,8 @@ Template.projectCard.events({
   },
   'click .addHours' (event, template) {
     Session.set('currentProject', template.data);
+  },
+  'click .subtractHours' (event, template) {
+    Session.set('currentProject', template.data);
   }
 });

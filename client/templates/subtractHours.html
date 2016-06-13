@@ -1,0 +1,23 @@
+<template name="subtractHours">
+  <!-- Modal Structure -->
+  <div id="subtract-hours-modal" class="modal">
+    <div class="modal-content">
+      <h4>Sottrai ore al progetto {{currentProject.name}}</h4>
+      <div class="row">
+        <form class="col s12 subtract-hours">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="hours_less" type="number" class="validate">
+              <label for="hours_less">Numero di ore</label>
+            </div>
+          </div>
+
+          <input type="submit" class="waves-effect waves-light btn" value="Sottrai"/>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Chiudi</a>
+    </div>
+  </div>
+</template>
