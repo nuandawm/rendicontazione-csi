@@ -1,7 +1,7 @@
 import { Template } from 'meteor/templating';
 import { Projects } from '../../lib/collections';
 
-import './addCard.html';
+import './addProject.html';
 
 Template.addCard.onRendered(function () {
   this.findAll('.modal-trigger').forEach(function(el){
