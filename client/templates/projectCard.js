@@ -13,10 +13,7 @@ Template.projectCard.events({
   'click .close' () {
     Projects.remove(this._id);
   },
-  'submit .add-hours' (event) {
-    event.preventDefault();
-    console.log(this._id);
-    $('#add-hours-modal').closeModal();
-    //Projects.update(this._id, {$inc: {hours: parseInt(event.target.hours_more.value)}});
+  'click .addHours' (event, template) {
+    Session.set('currentProject', template.data);
   }
 });
