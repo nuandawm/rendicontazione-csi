@@ -4,4 +4,6 @@ import './main.html';
 
 Template.body.onRendered(function(){
   Session.set('currentProject', {});
+
+  Session.set('backupProject', null);
 });

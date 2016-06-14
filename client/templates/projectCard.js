@@ -11,6 +11,7 @@ Template.projectCard.onRendered(function () {
 
 Template.projectCard.events({
   'click .close' () {
+    Session.set('backupProject', Projects.findOne(this._id));
     Projects.remove(this._id);
   },
   'click .addHours' (event, template) {
