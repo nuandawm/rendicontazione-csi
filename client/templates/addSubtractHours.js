@@ -14,7 +14,7 @@ Template.addHours.events({
       hours = 0;
     Projects.update(currentProject._id, {$inc: {hours: hours}});
     $('#add-hours-modal').closeModal();
-    $('#hours_more').val('');
+    event.target.hours_more.value = '';
   }
 });
 
@@ -29,7 +29,7 @@ Template.subtractHours.events({
       hours = currentProject.hours;
     Projects.update(currentProject._id, {$inc: {hours: - hours}});
     $('#subtract-hours-modal').closeModal();
-    $('#hours_less').val('');
+    event.target.hours_less.value = '';
   }
 });
 

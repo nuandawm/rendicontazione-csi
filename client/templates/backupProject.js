@@ -14,6 +14,9 @@ Template.backupProject.events({
   'click .undo' () {
     Projects.insert(Session.get('backupProject'));
     Session.set('backupProject', null);
+  },
+  'click .close' () {
+    Session.set('backupProject', null);
   }
 });
 

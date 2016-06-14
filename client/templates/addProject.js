@@ -15,5 +15,7 @@ Template.addCard.events({
     var target = event.target;
     Projects.insert({name: target.project_name.value, hours: parseInt(target.project_hours.value)});
     $('#add-card-modal').closeModal();
+    target.project_name.value = '';
+    target.project_hours.value = '';
   }
 });
