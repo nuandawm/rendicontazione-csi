@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Projects } from '../../lib/collections';
 
@@ -13,7 +14,7 @@ Template.addCard.events({
   'submit .new-project' (event) {
     event.preventDefault();
     var target = event.target;
-    Projects.insert({name: target.project_name.value, hours: parseInt(target.project_hours.value)});
+    Projects.insert({name: target.project_name.value, hours: parseInt(target.project_hours.value), userId: Meteor.userId()});
     $('#add-card-modal').closeModal();
     target.project_name.value = '';
     target.project_hours.value = '';
