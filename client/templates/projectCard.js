@@ -11,8 +11,8 @@ Template.projectCard.onRendered(function () {
 });
 
 Template.projectCard.helpers({
-  'percentage' (hours) {
-    return hours / Session.get('totalHours') * 100;
+  'percentage' () {
+    return this.hours / Session.get('totalHours') * 100;
   }
 });
 

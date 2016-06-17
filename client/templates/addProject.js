@@ -15,11 +15,12 @@ Template.addCard.events({
     event.preventDefault();
     const project = {
       name: event.target.project_name.value,
-      hours: parseInt(event.target.project_hours.value)
+      hours: parseInt(event.target.project_hours.value),
+      month: Session.get('actualMonth')
     };
     Meteor.call('addProject', project);
     $('#add-card-modal').closeModal();
-    target.project_name.value = '';
-    target.project_hours.value = '';
+    event.target.project_name.value = '';
+    event.target.project_hours.value = '';
   }
 });
