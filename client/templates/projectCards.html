@@ -6,13 +6,12 @@
       </p>
     </div>
   </div>
-  {{#each project in projects}}
+
   <div class="row">
-    {{#each project}}
+    {{#each project in projects}}
     <div class="col l4 s12">
-      {{>projectCard}}
+      {{>projectCard project}}
     </div>
     {{/each}}
   </div>
-  {{/each}}
 </template>

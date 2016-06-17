@@ -1,4 +1,5 @@
 import { Template } from 'meteor/templating';
+import { Session } from 'meteor/session';
 import { Projects } from '../../lib/collections';
 
 import './projectCard.html';
@@ -9,10 +10,16 @@ Template.projectCard.onRendered(function () {
   });
 });
 
+Template.projectCard.helpers({
+  'percentage' (hours) {
+    return hours / Session.get('totalHours') * 100;
+  }
+});
+
 Template.projectCard.events({
   'click .close' () {
     Session.set('backupProject', Projects.findOne(this._id));
-    Projects.remove(this._id);
+    Meteor.call('removeProject', this._id);
   },
   'click .addHours' (event, template) {
     Session.set('currentProject', template.data);
