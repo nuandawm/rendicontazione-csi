@@ -1,0 +1,22 @@
+<template name="addMonth">
+  <div id="add-month-modal" class="modal">
+    <div class="modal-content">
+      <h4>Aggiungi un mese non presente in lista</h4>
+      <div class="row">
+        <form class="col s12 add-month">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="month_to_add" type="text" class="validate">
+              <label for="month_to_add">Mese (formato: MM/AAAA)</label>
+            </div>
+          </div>
+
+          <input type="submit" class="waves-effect waves-light btn" value="Aggiungi"/>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Chiudi</a>
+    </div>
+  </div>
+</template>

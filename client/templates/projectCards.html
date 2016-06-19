@@ -5,12 +5,18 @@
         Totale ore: {{totalHours}}
       </p>
     </div>
-    <div class="input-field col l3 offset-l6 s12">
-      <select class="browser-default" id="select_month">
+    <div class="input-field col offset-l6 l3 s12">
+      <select class="browser-default select_month">
         {{#each months}}
-        <option value="">{{this}}</option>
+        <option value="{{@index}}" {{selectedActualMonth jsDate}}>{{displayDate}}</option>
         {{/each}}
       </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col offset-l9 l3 s12">
+      <a class="waves-effect waves-light btn modal-trigger" href="#add-month-modal">Aggiungi mese</a>
     </div>
   </div>
 
