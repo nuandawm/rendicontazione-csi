@@ -4,7 +4,7 @@ import { Session } from 'meteor/session';
 import { _ } from 'meteor/underscore';
 
 Template.addMonth.events({
-  'submit .add-month' () {
+  'submit .add-month' (event) {
     event.preventDefault();
     var months = Session.get('months');
     var monthToAdd = event.target.month_to_add.value;
