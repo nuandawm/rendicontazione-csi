@@ -13,9 +13,12 @@ Template.addCard.onRendered(function () {
 Template.addCard.events({
   'submit .new-project' (event) {
     event.preventDefault();
+    var name = (event.target.project_name.value !== '') ? event.target.project_name.value : 'No name';
+    var hours = parseInt(event.target.project_hours.value);
+    hours = (!isNaN(hours)) ? hours : 0;
     const project = {
-      name: event.target.project_name.value,
-      hours: parseInt(event.target.project_hours.value),
+      name: name,
+      hours: hours,
       month: Session.get('actualMonth')
     };
     Meteor.call('addProject', project);
