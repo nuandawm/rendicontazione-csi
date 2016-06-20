@@ -58,6 +58,18 @@ Template.projectCards.onCreated(() => {
       };
     });
 
+    var thisMonth = new Date();
+    thisMonth = new Date(thisMonth.getFullYear(), thisMonth.getMonth());
+    if (months.length == 0) {
+      months.push({
+          jsDate: thisMonth,
+          displayDate: moment(thisMonth).format('MMMM YYYY')
+      });
+    }
+    else if (months.length == 1
+      && moment(months[0].jsDate).format('MM/YYYY') !== moment(thisMonth).format('MM/YYYY'))
+      Session.set('actualMonth', months[0].jsDate);
+
     Session.set('months', months);
   });
 });
