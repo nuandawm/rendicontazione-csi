@@ -1,0 +1,7 @@
+<template name="projectManagerPanel">
+  {{#unless selectedEmployee}}
+    {{>employeeList}}
+  {{else}}
+    {{>employeeProjectList selectedEmployee}}
+  {{/unless}}
+</template>

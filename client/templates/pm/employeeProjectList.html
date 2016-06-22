@@ -1,0 +1,37 @@
+<template name="employeeProjectList">
+  <div class="row">
+    <div class="col offset-l6 l3 s12">
+      <a href="#" class="btn right unselectEmployee">
+        Torna all'elenco di sviluppatori
+      </a>
+    </div>
+  </div>
+
+  <h1>
+    Progetti di {{username}}
+  </h1>
+
+  <div class="row">
+    <div class="col l3 s12">
+      <p>
+        Totale ore: {{totalHours}}
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    {{#each project in projects}}
+    <div class="col l4 s12">
+      <div class="card">
+        <div class="card-content">
+          <i class="material-icons right close">close</i>
+          <span class="card-title">{{project.name}}</span>
+          <p>
+            Numero ore: {{project.hours}}
+          </p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</template>

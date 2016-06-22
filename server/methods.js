@@ -37,5 +37,13 @@ Meteor.methods({
     }
     else
       logger.error('Error subtracting hours to project '+projectId);
+  },
+  'makePM' (userId) {
+    Roles.removeUsersFromRoles(userId, 'employee');
+    Roles.addUsersToRoles(userId, 'projectManager');
+  },
+  'unmakePM' (userId) {
+    Roles.removeUsersFromRoles(userId, 'projectManager');
+    Roles.addUsersToRoles(userId, 'employee');
   }
 });

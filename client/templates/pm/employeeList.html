@@ -1,0 +1,17 @@
+<template name="employeeList">
+  <div class="row">
+    <div class="col s12">
+      <h1>Sviluppatori</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    {{#each employee in employees}}
+      {{#unless isMe employee._id}}
+        <div class="col l4 s12">
+          {{>employeeCard employee}}
+        </div>
+      {{/unless}}
+    {{/each}}
+  </div>
+</template>

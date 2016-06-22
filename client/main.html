@@ -12,31 +12,37 @@
     {{>loginButtons}}
 
     {{#if currentUser}}
-    <div class="row">
-      <div class="col s12">
-        <h1>Gestisci i tuoi progetti</h1>
-        {{>backupProject}}
-      </div>
-    </div>
+      {{#if isInRole 'admin'}}
+        {{>adminPanel}}
+      {{else}}
+        {{#if isInRole 'projectManager'}}
+          {{>projectManagerPanel}}
+        {{else}}
+          <div class="row">
+            <div class="col s12">
+              <h1>Gestisci i tuoi progetti</h1>
+              {{>backupProject}}
+            </div>
+          </div>
 
-    {{>projectCards}}
+          {{>projectCards}}
 
-    {{>addCard}}
+          {{>addCard}}
 
-    {{>addHours}}
+          {{>addHours}}
 
-    {{>subtractHours}}
+          {{>subtractHours}}
 
-    {{>addMonth}}
-
+          {{>addMonth}}
+        {{/if}}
+      {{/if}}
     {{else}}
     <div class="row">
       <div class="col s12">
-        <h1>Effettua il login per vedere i tuoi progetti</h1>
+        <p>Effettua il login per vedere i tuoi progetti</p>
       </div>
     </div>
     {{/if}}
-
 
   </div>
 </body>

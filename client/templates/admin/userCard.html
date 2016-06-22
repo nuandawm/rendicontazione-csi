@@ -1,0 +1,17 @@
+<template name="userCard">
+  <div class="card">
+    <div class="card-content">
+      <i class="material-icons right close">close</i>
+      <span class="card-title">
+        {{username}}
+      </span>
+    </div>
+    <div class="card-action">
+      {{#if userIsProjectManager}}
+      <a class="unmakePM">Rendi Sviluppatore</a>
+      {{else}}
+      <a class="makePM">Rendi Project Manager</a>
+      {{/if}}
+    </div>
+  </div>
+</template>
