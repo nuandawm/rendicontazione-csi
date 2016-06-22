@@ -2,3 +2,7 @@
 .close {
     cursor: pointer;
 }
+
+.viewProjects, .makePM, .unmakePM, .unselectEmployee {
+    cursor: pointer;
+}
