@@ -17,6 +17,13 @@
         Totale ore: {{totalHours}}
       </p>
     </div>
+    <div class="input-field col offset-l6 l3 s12">
+      <select class="browser-default select_month">
+        {{#each months}}
+        <option value="{{@index}}" {{selectedActualMonth jsDate}}>{{displayDate}}</option>
+        {{/each}}
+      </select>
+    </div>
   </div>
 
   <div class="row">
@@ -24,7 +31,6 @@
     <div class="col l4 s12">
       <div class="card">
         <div class="card-content">
-          <i class="material-icons right close">close</i>
           <span class="card-title">{{project.name}}</span>
           <p>
             Numero ore: {{project.hours}}

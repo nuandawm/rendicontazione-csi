@@ -5,9 +5,6 @@ Template.employeeList.helpers({
   employees () {
     return Meteor.users.find();
   },
-  notEmployees () {
-    return Meteor.users.find();
-  },
   isMe (userId) {
     return Meteor.userId() === userId;
   }

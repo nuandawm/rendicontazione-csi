@@ -6,21 +6,6 @@
   </div>
 
   <div class="row">
-    <div class="col offset-l9 l3 s12">
-      <!-- Dropdown Trigger -->
-      <a class='dropdown-button btn' href='#' data-activates='developersDropdown'>Aggiungi sviluppatori</a>
-
-      <!-- Dropdown Structure -->
-      <ul id='developersDropdown' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="row">
     {{#each employee in employees}}
       {{#unless isMe employee._id}}
         <div class="col l4 s12">
